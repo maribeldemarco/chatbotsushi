@@ -6,7 +6,7 @@ import Chatbot from './Chatbot';
 function App() {
   return (
     <div className="App">
-      <h1>Chatbot</h1>
+      <h1>Bienvenidos al Chatbot de Sushi</h1>
       <Chatbot />
     </div>
   );
