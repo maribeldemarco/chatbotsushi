@@ -23,7 +23,7 @@ const Chatbot = () => {
     setMensajes([
       ...mensajes,
       { texto: mensajeUsuario, remitente: 'usuario' },
-      { texto: datos.respuesta, remitente: 'bot' },
+      { texto: datos.respuesta || '', remitente: 'bot' }, // Aseguramos que la respuesta no sea undefined
     ]);
 
     setMensajeUsuario('');
@@ -31,23 +31,24 @@ const Chatbot = () => {
 
   return (
     <div> Escribinos tu consulta
-    <div className="contenedor-chatbot">
-      <div className="mensajes-chatbot">
-        {mensajes.map((mensaje, index) => (
-          <div key={index} className={mensaje.remitente}>
-   <span>{parse(mensaje.texto)}</span>    </div>
-        ))}
+      <div className="contenedor-chatbot">
+        <div className="mensajes-chatbot">
+          {mensajes.map((mensaje, index) => (
+            <div key={index} className={mensaje.remitente}>
+              <span>{parse(mensaje.texto || '')}</span>  {/* Aseguramos que sea siempre una cadena */}
+            </div>
+          ))}
+        </div>
+        <div className="entrada-chatbot">
+          <input
+            type="text"
+            value={mensajeUsuario}
+            onChange={(e) => setMensajeUsuario(e.target.value)}
+            placeholder="Escribe tu mensaje..."
+          />
+          <button onClick={enviarMensaje}>Enviar</button>
+        </div>
       </div>
-      <div className="entrada-chatbot">
-        <input
-          type="text"
-          value={mensajeUsuario}
-          onChange={(e) => setMensajeUsuario(e.target.value)}
-          placeholder="Escribe tu mensaje..."
-        />
-        <button onClick={enviarMensaje}>Enviar</button>
-      </div>
-    </div>
     </div>
   );
 };
