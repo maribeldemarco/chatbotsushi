@@ -19,7 +19,6 @@ Permite reiniciar el servidor automáticamente ante cambios detectados en la int
 
 # Cómo instalar y correr el proyecto
 
-
 Backend
 1. Clona el repositorio :
    Desde tu terminal de Visual Studio Code: 
@@ -27,7 +26,7 @@ Backend
 2.Luego instala las dependencias con el comando npm install 
    
 3. Configura las variables de entorno:
-   Crea un archivo .env en la raíz del proyecto y agrega lo siguiente:
+   Crea un archivo .env en la raíz del proyecto y agregá lo siguiente:
    
    DATABASE_URL=
 
@@ -43,7 +42,7 @@ Deberás antes seguir estos pasos para saber que es lo que colocarás en DATABAS
 
 Entonces  tu archivo .env quedaria así
 Ejemplo: 
-DATABASE_URL=mongodb+srv://usuario:<db_password>@cluster0.yw9cs.mongodb.net/
+DATABASE_URL=mongodb+srv://usuario:<db_password>@cluster0.yw9cs.mongodb.net/chatbotsushi
 
 
 4. Inicia el servidor: en la carpeta principal del proyecto
@@ -61,11 +60,9 @@ Con el comando   cd chatbot
 2. Instala las dependencias:
   Con el comando  npm install
    
-
 3. Inicia el servidor del frontend:
  Con el comando   npm start
    
-
 El frontend se ejecutará en `http://localhost:3000`.
 
 
@@ -93,14 +90,11 @@ El chatbot responde a varios tipos de mensajes. Aquí algunos ejemplos:
 - Usuario: "Promo."
 - Bot: Brinda info de la promo vigente.
 
----
+
 
 # Endpoints disponibles
 
-** /menu**
-Obtiene el menú actual con los productos disponibles.
-
-**/api/chatbot**
+/api/chatbot
 Se obtiene acceso al chatbot
 
  # Base de Datos
@@ -109,7 +103,7 @@ Utilizamos esta base de datos en la nube con Mongo DB https://www.mongodb.com/pr
 
 # *Estructura de los datos*
 -Una colección de pedidos (no hace falta crearlo ya que el código proporciona su implementación una vez que desde la interfaz de usuario se agrega el producto)
--Colección de productos
+-Una colección de productos
 
 # *Colección: `productos`*
 Cada documento representa un producto en el menú.
@@ -129,13 +123,34 @@ Cómo cargar los datos iniciales?
 # Datos de ejemplo
 2. Inserta los datos de ejemplo en la colección `productos`:
 
-   [
      {
-       descripción: "Sushi de carne al malbec",
-       precio: 9199,
-       descripción: " 6 piezas de sushi con carne de res marinada en salsa Malbec”
+descripcion:"10 piezas de riquisimo sushi roll con salmón, palta y arroz"
+nombre: "Sushi Roll"
+precio: 10999
      },
-      ]
+   {
+descripcion:"6 piezas de sushi con carne de res marinada en salsa Malbec, acompañad…"
+nombre:"Sushi de carne al malbec"
+precio:9199
+   },
+    {
+nombre:"Sushi veggie"
+precio:9999
+descripcion:"12 Sushi de vegetales frescos como zanahoria, palta y alga nori"
+      },
+    {
+descripcion:"12 piezas Sushi de camarón con arroz, mayonesa y salsa teriyaki"
+nombre:"Camaron Sushi"
+precio:7999
+ },
+ {
+descripcion:"6 piezas de atún fresco, pepino y arroz, acompañado de salsa de soya"
+nombre:"Sushi Atun"
+precio:8100
+}
+
+
+   
 
 
 
