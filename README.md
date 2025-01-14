@@ -127,27 +127,27 @@ Cómo cargar los datos iniciales?
 descripcion:"10 piezas de riquisimo sushi roll con salmón, palta y arroz"
 nombre: "Sushi Roll"
 precio: 10999
-     },
+     },  
    {
 descripcion:"6 piezas de sushi con carne de res marinada en salsa Malbec, acompañad…"
 nombre:"Sushi de carne al malbec"
 precio:9199
-   },
+   },  
     {
 nombre:"Sushi veggie"
 precio:9999
 descripcion:"12 Sushi de vegetales frescos como zanahoria, palta y alga nori"
-      },
+      },  
     {
 descripcion:"12 piezas Sushi de camarón con arroz, mayonesa y salsa teriyaki"
 nombre:"Camaron Sushi"
 precio:7999
- },
+ },  
  {
 descripcion:"6 piezas de atún fresco, pepino y arroz, acompañado de salsa de soya"
 nombre:"Sushi Atun"
 precio:8100
-}
+}  
 
 
    
